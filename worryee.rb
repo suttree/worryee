@@ -1,4 +1,5 @@
 require 'rubygems'
+gem 'twitter', '0.9.8'
 require 'twitter'
 require 'open-uri'
 
@@ -34,7 +35,7 @@ EOS
   exit('Run this script again, now that you are authorised')
 end
 
-if (1 + rand(6) == 6)
+if (1 + rand(10) == 5)
   twitter.direct_message_create('suttree', "What are you worried about?")
 else
   puts "Nothing to worry about"
