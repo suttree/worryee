@@ -6,6 +6,7 @@ class ConfigStore
   end
   
   def load
+    require 'yaml'
     @config ||= YAML::load(open(file))
     self
   end
