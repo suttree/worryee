@@ -1,10 +1,9 @@
 require 'rubygems'
 require 'twilio-ruby'
 
-#if (1 + rand(10) == 5)
-if (true)
-  account_sid = 'AC2efb3573f29f88e3caf08568b6e1f061'
-  auth_token = '58a7025898ed039f92043d73c73d3f06'
+if (1 + rand(10) == 5)
+  account_sid = ''
+  auth_token = ''
 
   client = Twilio::REST::Client.new account_sid, auth_token
 
