@@ -1,21 +1,8 @@
 require 'rubygems'
-gem 'twitter'
-require 'twitter'
-require 'open-uri'
-
-require File.join(File.dirname(__FILE__), 'helpers', 'config_store')
-settings = ConfigStore.new(File.join(File.dirname(__FILE__), '.twitter'))
-#oauth = Twitter::OAuth.new(config['token'], config['secret'])
-
-Twitter.configure do |config|
-  config.consumer_key = settings['ckey']
-  config.consumer_secret = settings['csecret']
-  config.oauth_token = settings['atoken']
-  config.oauth_token_secret = settings['asecret']
-end
+gem 'imessage'
 
 if (1 + rand(10) == 5)
-  Twitter.direct_message_create('suttree', "What are you worried about? - #{SecureRandom.hex[0..4]}")
+  imessage send 'What are you worried about?' --to 'duncan@suttree.com'
 else
   puts "Nothing to worry about"
 end
