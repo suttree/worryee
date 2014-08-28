@@ -2,6 +2,7 @@ require 'rubygems'
 gem 'twitter'
 require 'twitter'
 require 'open-uri'
+require 'securerandom'
 
 require File.join(File.dirname(__FILE__), 'helpers', 'config_store')
 settings = ConfigStore.new(File.join(File.dirname(__FILE__), '.twitter'))
@@ -15,7 +16,7 @@ Twitter.configure do |config|
 end
 
 if (1 + rand(10) == 5)
-  Twitter.direct_message_create('suttree', "What are you worried about? - #{SecureRandom.hex[0..4]}")
+  Twitter.direct_message_create('troisen', "What are you worried about? - #{SecureRandom.hex[0..4]}")
 else
   puts "Nothing to worry about"
 end
