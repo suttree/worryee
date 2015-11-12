@@ -16,7 +16,7 @@ Twitter.configure do |config|
 end
 
 if (1 + rand(10) == 5)
-  Twitter.direct_message_create('troisen', "What are you worried about? - #{SecureRandom.hex[0..4]}")
+  Twitter.direct_message_create('troisenne', "What are you worried about? - #{SecureRandom.hex[0..4]}")
 else
   puts "Nothing to worry about"
 end
